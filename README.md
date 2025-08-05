@@ -1,50 +1,48 @@
-# Ready Remit BFF - Server-Driven UI
+# Ready Remit BFF - Simple API
 
 [![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)](https://nestjs.com/)
 
 ## Main Technologies
 - **NestJS**: Modular backend framework
-- **Redis**: UI configuration and frequent data caching
 - **TypeScript**: Static typing and better maintainability
-- **Axios**: External service communication
 
 ## Prerequisites
-
-### Redis Installation (macOS)
-Install Redis using Homebrew:
-```bash
-brew install redis
-```
-
-Start Redis service:
-```bash
-redis-server
-```
-
-Verify Redis is running:
-```bash
-redis-cli ping
-# Should return: PONG
-```
 
 ### Node.js
 Ensure you have Node.js installed (version 16 or higher recommended).
 
-## Environment Variables
-Create a `.env` file in the root directory:
-```bash
-touch .env
+## Endpoints
+
+### GET /
+Returns a simple hello message:
+```
+Hello world from ReadyRemit SDUI
 ```
 
-Add the following variables:
-```env
-# Server base URL - used when the server needs to reference itself
-# (e.g., when passing endpoints or URLs to fetch other layouts)
-SERVER_BASE_URL=http://localhost:3000
-
-# Redis connection URL
-REDIS_URL=redis://localhost:6379
+### GET /home
+Returns JSON data from `src/data/home.json`:
+```json
+{
+  "message": "Welcome to ReadyRemit Home",
+  "status": "success",
+  "data": {
+    "features": ["transfers", "recipients", "history"],
+    "version": "1.0.0",
+    "timestamp": "2024-01-01T00:00:00Z"
+  },
+  "metadata": {
+    "api_version": "v1",
+    "environment": "development"
+  }
+}
 ```
+
+## JSON Data Location
+The JSON data for the `/home` endpoint is stored in:
+```
+src/data/home.json
+```
+You can modify this file to change the response data.
 
 ## Installation
 ```bash
@@ -80,21 +78,17 @@ npm run start:debug
 - `npm run build` - Build the application
 - `npm run start` - Start the application
 - `npm run start:dev` - Start in development mode with watch
-- `npm run start:debug` - Start in debug mode
 - `npm run start:prod` - Start in production mode
-- `npm run lint` - Run ESLint
-- `npm run test` - Run unit tests
-- `npm run test:e2e` - Run end-to-end tests
 
-## Troubleshooting
+## Usage
 
-### Redis Connection Issues
-If you see `ECONNREFUSED 127.0.0.1:6379` errors:
-1. Make sure Redis is installed and running
-2. Check if Redis is listening on the correct port: `redis-cli ping`
-3. Verify your `REDIS_URL` environment variable is correct
+1. Install dependencies: `npm install`
+2. Start the application: `npm run start:dev`
+3. Access the endpoints:
+   - http://localhost:3000/ (Hello message)
+   - http://localhost:3000/home (JSON data)
 
-### Port Already in Use
+### Port Configuration
 If port 3000 is already in use, you can change it by setting the `PORT` environment variable:
 ```bash
 PORT=3001 npm run start:dev

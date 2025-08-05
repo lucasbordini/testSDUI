@@ -1,0 +1,802 @@
+{
+  "id": 1,
+  "type": "Scaffold",
+  "decorators": [
+    {
+      "name": "StatusBarPadding",
+      "value": true
+    },
+    {
+      "name": "NavigationBarsPadding",
+      "value": true
+    }
+  ],
+  "properties": {
+    "sheetContent": [
+      {
+        "id": 101,
+        "type": "BottomSheet",
+        "decorators": [],
+        "properties": {
+          "isOpen": true,
+          "isDismissable": false
+        },
+        "children": [
+          {
+            "id": 102,
+            "type": "Column",
+            "decorators": [
+              {
+                "name": "Padding",
+                "value": 24
+              },
+              {
+                "name": "BackgroundColor",
+                "value": "foreground"
+              }
+            ],
+            "properties": {
+              "verticalArrangement": {
+                "alignment": "Top",
+                "space": 24
+              },
+              "horizontalAlignment": "Left"
+            },
+            "children": [
+              {
+                "id": 103,
+                "type": "TextView",
+                "decorators": [],
+                "properties": {
+                  "text": "Brightwell is a technology provider and not a bank or other regulated financial institution. All regulated international transfer services associated with ReadyRemit® are provided by The Bancorp Bank, N.A. Terms and conditions apply.",
+                  "fontColor": "textSecondary",
+                  "designToken": "Body"
+                }
+              },
+              {
+                "id": 104,
+                "type": "Row",
+                "decorators": [],
+                "properties": {
+                  "horizontalArrangement": {
+                    "alignment": "Start",
+                    "space": 12
+                  },
+                  "verticalAlignment": "Top"
+                },
+                "children": [
+                  {
+                    "id": 105,
+                    "type": "Checkbox",
+                    "decorators": [],
+                    "properties": {
+                      "checked": false,
+                      "enabled": true
+                    }
+                  },
+                  {
+                    "id": 106,
+                    "type": "Column",
+                    "decorators": [
+                      {
+                        "name": "Weight",
+                        "value": 1
+                      }
+                    ],
+                    "properties": {
+                      "verticalArrangement": {
+                        "alignment": "Top",
+                        "space": 0
+                      },
+                      "horizontalAlignment": "Left"
+                    },
+                    "children": [
+                      {
+                        "id": 107,
+                        "type": "TextView",
+                        "decorators": [],
+                        "properties": {
+                          "text": "I agree and accept the ",
+                          "fontColor": "textSecondary",
+                          "designToken": "Body"
+                        }
+                      },
+                      {
+                        "id": 108,
+                        "type": "TextView",
+                        "decorators": [
+                          {
+                            "name": "OnClick",
+                            "value": {
+                              "type": "bottomSheet",
+                              "data": "201"
+                            }
+                          }
+                        ],
+                        "properties": {
+                          "text": "Terms and Conditions",
+                          "fontColor": "primary",
+                          "designToken": "Body"
+                        }
+                      },
+                      {
+                        "id": 109,
+                        "type": "TextView",
+                        "decorators": [],
+                        "properties": {
+                          "text": ", ReadyRemit ",
+                          "fontColor": "textSecondary",
+                          "designToken": "Body"
+                        }
+                      },
+                      {
+                        "id": 110,
+                        "type": "TextView",
+                        "decorators": [
+                          {
+                            "name": "OnClick",
+                            "value": {
+                              "type": "bottomSheet",
+                              "data": "301"
+                            }
+                          }
+                        ],
+                        "properties": {
+                          "text": "Privacy Policy",
+                          "fontColor": "primary",
+                          "designToken": "Body"
+                        }
+                      },
+                      {
+                        "id": 111,
+                        "type": "TextView",
+                        "decorators": [],
+                        "properties": {
+                          "text": ", and ",
+                          "fontColor": "textSecondary",
+                          "designToken": "Body"
+                        }
+                      },
+                      {
+                        "id": 112,
+                        "type": "TextView",
+                        "decorators": [
+                          {
+                            "name": "OnClick",
+                            "value": {
+                              "type": "bottomSheet",
+                              "data": "401"
+                            }
+                          }
+                        ],
+                        "properties": {
+                          "text": "The Bancorp Bank N.A Privacy Policy.",
+                          "fontColor": "primary",
+                          "designToken": "Body"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 113,
+                "type": "Button",
+                "decorators": [
+                  {
+                    "name": "FullWidth",
+                    "value": true
+                  }
+                ],
+                "properties": {
+                  "backgroundColor": "primary",
+                  "disabledColor": "primaryDisabled",
+                  "contentPadding": 16,
+                  "enabled": true,
+                  "onClick": {
+                    "type": "apiCall",
+                    "data": "/TBD"
+                  },
+                  "shape": {
+                    "type": "Medium",
+                    "value": 0
+                  }
+                },
+                "children": [
+                  {
+                    "id": 114,
+                    "type": "TextView",
+                    "decorators": [],
+                    "properties": {
+                      "text": "Continue",
+                      "designToken": "Button",
+                      "fontColor": "buttonFont",
+                      "textAlign": "Center"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 201,
+        "type": "BottomSheet",
+        "decorators": [],
+        "properties": {
+          "isOpen": false,
+          "isDismissable": true
+        },
+        "children": [
+          {
+            "id": 202,
+            "type": "WebView",
+            "decorators": [
+              {
+                "name": "Size",
+                "value": "MaxSize"
+              }
+            ],
+            "properties": {
+              "sourceUrl": "https://www.apple.com"
+            }
+          }
+        ]
+      },
+      {
+        "id": 301,
+        "type": "BottomSheet",
+        "decorators": [],
+        "properties": {
+          "isOpen": false,
+          "isDismissable": true
+        },
+        "children": [
+          {
+            "id": 302,
+            "type": "WebView",
+            "decorators": [
+              {
+                "name": "Size",
+                "value": "MaxSize"
+              }
+            ],
+            "properties": {
+              "sourceUrl": "https://www.google.com"
+            }
+          }
+        ]
+      },
+      {
+        "id": 401,
+        "type": "BottomSheet",
+        "decorators": [],
+        "properties": {
+          "isOpen": false,
+          "isDismissable": true
+        },
+        "children": [
+          {
+            "id": 402,
+            "type": "WebView",
+            "decorators": [
+              {
+                "name": "Size",
+                "value": "MaxSize"
+              }
+            ],
+            "properties": {
+              "sourceUrl": "https://www.github.com"
+            }
+          }
+        ]
+      }
+    ],
+    "topBar": null,
+    "snackBar": {
+      "id": 100,
+      "type": "Snackbar",
+      "decorators": [
+        {
+          "name": "BoxAlignment",
+          "value": "BottomCenter"
+        }
+      ],
+      "properties": {
+        "text": "Message from server!"
+      }
+    }
+  },
+  "children": [
+    {
+      "id": 2,
+      "type": "Column",
+      "decorators": [
+        {
+          "name": "Size",
+          "value": "MaxSize"
+        },
+        {
+          "name": "BackgroundColor",
+          "value": "background"
+        }
+      ],
+      "properties": {
+        "verticalArrangement": {
+          "alignment": "Top",
+          "space": 8
+        },
+        "horizontalAlignment": "Center"
+      },
+      "children": [
+        {
+          "id": 3,
+          "type": "Column",
+          "decorators": [
+            {
+              "name": "BackgroundColor",
+              "value": "foreground"
+            },
+            {
+              "name": "Padding",
+              "value": 16
+            }
+          ],
+          "properties": {
+            "horizontalAlignment": "Center",
+            "verticalArrangement": {
+              "alignment": "Top",
+              "space": 16
+            }
+          },
+          "children": [
+            {
+              "id": 4,
+              "type": "TextView",
+              "decorators": [
+                {
+                  "name": "PaddingHorizontal",
+                  "value": 16
+                },
+                {
+                  "name": "PaddingTop",
+                  "value": 16
+                }
+              ],
+              "properties": {
+                "text": "International & domestic transfers",
+                "fontColor": "textPrimary",
+                "designToken": "TitleScreen"
+              }
+            },
+            {
+              "id": 5,
+              "type": "TextView",
+              "decorators": [
+                {
+                  "name": "PaddingHorizontal",
+                  "value": 16
+                }
+              ],
+              "properties": {
+                "text": "Send funds to your recipients with convenience and flexibility.",
+                "fontColor": "textSecondary",
+                "designToken": "Body"
+              }
+            },
+            {
+              "id": 6,
+              "type": "Button",
+              "decorators": [
+                {
+                  "name": "PaddingHorizontal",
+                  "value": 16
+                },
+                {
+                  "name": "PaddingBottom",
+                  "value": 16
+                },
+                {
+                  "name": "FullWidth",
+                  "value": true
+                }
+              ],
+              "properties": {
+                "backgroundColor": "primary",
+                "disabledColor": "primaryDisabled",
+                "contentPadding": 8,
+                "enabled": true,
+                "onClick": {
+                  "type": "navigate",
+                  "data": "/startATransfer"
+                },
+                "shape": {
+                  "type": "Medium",
+                  "value": 0
+                }
+              },
+              "actions": {},
+              "children": [
+                {
+                  "id": 7,
+                  "type": "TextView",
+                  "decorators": [],
+                  "properties": {
+                    "text": "Start a transfer",
+                    "designToken": "Button",
+                    "fontColor": "buttonFont",
+                    "textAlign": "Center"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "type": "Row",
+          "decorators": [
+            {
+              "name": "BackgroundColor",
+              "value": "foreground"
+            },
+            {
+              "name": "FullWidth",
+              "value": true
+            },
+            {
+              "name": "OnClick",
+              "value": {
+                "type": "navigate",
+                "data": "/recipients"
+              }
+            },
+            {
+              "name": "VerticalPadding",
+              "value": 32
+            },
+            {
+              "name": "HorizontalPadding",
+              "value": 16
+            }
+          ],
+          "properties": {
+            "horizontalArrangement": {
+              "alignment": "Start",
+              "space": 16
+            },
+            "verticalAlignment": "CenterVertically"
+          },
+          "children": [
+            {
+              "id": 26,
+              "type": "Box",
+              "decorators": [
+                {
+                  "name": "Size",
+                  "value": 48
+                },
+                {
+                  "name": "Clip",
+                  "value": {
+                    "type": "Medium",
+                    "value": 0
+                  }
+                }
+              ],
+              "properties": {},
+              "children": [
+                {
+                  "id": 9,
+                  "type": "ImageView",
+                  "decorators": [
+                    {
+                      "name": "Width",
+                      "value": 20
+                    },
+                    {
+                      "name": "Height",
+                      "value": 20
+                    }
+                  ],
+                  "properties": {
+                    "imageUrl": "https://cdn3.iconfinder.com/data/icons/mobile-friendly-ui/100/chevron_right-512.png"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 10,
+              "type": "TextView",
+              "decorators": [],
+              "properties": {
+                "text": "Recipients",
+                "designToken": "BodyImportant",
+                "fontColor": "textPrimary"
+              }
+            },
+            {
+              "id": 11,
+              "type": "Spacer",
+              "decorators": [
+                {
+                  "name": "FullWidth",
+                  "value": true
+                }
+              ],
+              "properties": {}
+            },
+            {
+              "id": 12,
+              "type": "ImageView",
+              "decorators": [
+                {
+                  "name": "Width",
+                  "value": 20
+                },
+                {
+                  "name": "Height",
+                  "value": 20
+                }
+              ],
+              "properties": {
+                "imageUrl": "https://cdn3.iconfinder.com/data/icons/mobile-friendly-ui/100/chevron_right-512.png",
+                "shape": {
+                  "type": "Circle",
+                  "value": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "type": "Column",
+          "decorators": [
+            {
+              "name": "BackgroundColor",
+              "value": "foreground"
+            },
+            {
+              "name": "HorizontalPadding",
+              "value": 16
+            }
+          ],
+          "properties": {},
+          "children": [
+            {
+              "id": 14,
+              "type": "Row",
+              "decorators": [
+                {
+                  "name": "BackgroundColor",
+                  "value": "foreground"
+                },
+                {
+                  "name": "OnClick",
+                  "value": {
+                    "type": "navigate",
+                    "data": "/pendingTransfers"
+                  }
+                },
+                {
+                  "name": "HorizontalPadding",
+                  "value": 0
+                },
+                {
+                  "name": "TopPadding",
+                  "value": 24
+                },
+                {
+                  "name": "BottomPadding",
+                  "value": 16
+                }
+              ],
+              "properties": {},
+              "children": [
+                {
+                  "id": 15,
+                  "type": "TextView",
+                  "decorators": [
+                    {
+                      "name": "Weight",
+                      "value": 1
+                    }
+                  ],
+                  "properties": {
+                    "text": "Pending transfers",
+                    "fontColor": "textSecondary",
+                    "designToken": "Body",
+                    "textAlignment": "Left"
+                  }
+                },
+                {
+                  "id": 16,
+                  "type": "TextView",
+                  "decorators": [
+                    {
+                      "name": "RightPadding",
+                      "value": 8
+                    }
+                  ],
+                  "properties": {
+                    "text": "1",
+                    "fontColor": "textSecondary",
+                    "designToken": "Body"
+                  }
+                },
+                {
+                  "id": 17,
+                  "type": "ImageView",
+                  "decorators": [
+                    {
+                      "name": "Width",
+                      "value": 20
+                    },
+                    {
+                      "name": "Height",
+                      "value": 20
+                    }
+                  ],
+                  "properties": {
+                    "imageUrl": "https://cdn3.iconfinder.com/data/icons/mobile-friendly-ui/100/chevron_right-512.png"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 18,
+              "type": "Divider",
+              "decorators": [
+                {
+                  "name": "VerticalPadding",
+                  "value": 8
+                }
+              ],
+              "properties": {
+                "foregroundColor": "divider",
+                "thickness": 1,
+                "startIndent": 0
+              },
+              "children": []
+            },
+            {
+              "id": 19,
+              "type": "Row",
+              "decorators": [
+                {
+                  "name": "BackgroundColor",
+                  "value": "foreground"
+                },
+                {
+                  "name": "OnClick",
+                  "value": {
+                    "type": "navigate",
+                    "data": "/transferHistory"
+                  }
+                },
+                {
+                  "name": "HorizontalPadding",
+                  "value": 0
+                },
+                {
+                  "name": "TopPadding",
+                  "value": 16
+                },
+                {
+                  "name": "BottomPadding",
+                  "value": 24
+                }
+              ],
+              "properties": {},
+              "children": [
+                {
+                  "id": 20,
+                  "type": "TextView",
+                  "decorators": [
+                    {
+                      "name": "Weight",
+                      "value": 1
+                    }
+                  ],
+                  "properties": {
+                    "text": "Transfer history",
+                    "fontColor": "textSecondary",
+                    "designToken": "Body"
+                  }
+                },
+                {
+                  "id": 21,
+                  "type": "TextView",
+                  "decorators": [
+                    {
+                      "name": "RightPadding",
+                      "value": 8
+                    }
+                  ],
+                  "properties": {
+                    "text": "1",
+                    "fontColor": "textSecondary",
+                    "designToken": "Body"
+                  }
+                },
+                {
+                  "id": 22,
+                  "type": "ImageView",
+                  "decorators": [
+                    {
+                      "name": "Width",
+                      "value": 20
+                    },
+                    {
+                      "name": "Height",
+                      "value": 20
+                    }
+                  ],
+                  "properties": {
+                    "imageUrl": "https://cdn3.iconfinder.com/data/icons/mobile-friendly-ui/100/chevron_right-512.png"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "type": "Spacer",
+          "decorators": [
+            {
+              "name": "Weight",
+              "value": 1.0
+            }
+          ],
+          "properties": {}
+        },
+        {
+          "id": 23,
+          "type": "Column",
+          "decorators": [
+            {
+              "name": "HorizontalPadding",
+              "value": 16
+            },
+            {
+              "name": "VerticalPadding",
+              "value": 24
+            }
+          ],
+          "properties": {
+            "verticalArrangement": {
+              "alignment": "Top",
+              "space": 16
+            },
+            "horizontalAlignment": "Left"
+          },
+          "children": [
+            {
+              "id": 24,
+              "type": "TextView",
+              "decorators": [],
+              "properties": {
+                "text": "To keep your money safe, only send money to those you know and trust.",
+                "fontColor": "textSecondary",
+                "designToken": "Disclosure"
+              }
+            },
+            {
+              "id": 25,
+              "type": "TextView",
+              "decorators": [],
+              "properties": {
+                "text": "Brightwell is a technology provider and not a bank or other regulated financial institution. All regulated international transfer services associated with ReadyRemit® are provided by The Bancorp Bank N.A. Terms and conditions apply.",
+                "fontColor": "textSecondary",
+                "designToken": "Disclosure"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
